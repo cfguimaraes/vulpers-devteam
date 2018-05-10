@@ -1,0 +1,21 @@
+{
+    "profissionais":
+    [
+        {
+            "login" : "fulanodetal",
+            "telefone": "31923490824",
+            "classificacao":"aprendiz jedi"
+        },
+        {
+            "login" : "bertrano",
+            "telefone": "203482034",
+            "classificacao":"cavaleiro jedi"
+        },
+        {
+            "login" : "JuniorClackKent",
+            "telefone": "20394508",
+            "classificacao":"caveleiro jedi"
+        }
+
+    ]
+}

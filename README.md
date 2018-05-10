@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vulper-challenge
 Do or do not, there is no try!
 
@@ -52,4 +53,8 @@ Caso a pontuação dada pelo Github ao desenvolvedor seja:
 - **maior ou igual** a 3.5, o campo "classificacao" será: cavaleiro jedi.
 
 Para cumprir o desafio, use a [Github Search API](https://developer.github.com/v3/search/#search-users)
+
+=======
+
+
 

@@ -17,11 +17,11 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework import routers
 from rest_framework.views import APIView
-from search.views import SearchGetView
+from search.views import ProfissionaisList
 
 
 urlpatterns = [
-	url(r'^vulpi-api/professional', SearchGetView.as_view()),
+	url(r'^vulpi-api/v1/professional', ProfissionaisList.as_view(), name="profissional-list"),
     url(r'^admin/', admin.site.urls),
 ]
 

@@ -34,8 +34,9 @@ class SearchGetView(APIView):
 
 	def conectionapi(request, language, location):
 
-		url = "https://api.github.com/search/users?q=language:"+language+"+location:"+location+"&type=Users"
-		r = requests.get(url)
+		url = "https://api.github.com/search/users"
+		payload = {"q":"language:"+language, "location":location, "type":"Users"}
+		r = requests.get(url,payload)
 		data = r.json()
 		return data
 
@@ -46,7 +47,6 @@ class SearchGetView(APIView):
 		for name in data:
 			login_arr = {}
 			login_arr['login'] = name['login']
-			login_arr['foto'] = name['avatar_url']
 			login_arr['classificacao'] = self.is_jedi(name['score'])
 			datajson.append(login_arr)
 		return datajson

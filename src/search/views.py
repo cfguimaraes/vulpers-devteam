@@ -7,7 +7,7 @@ from django.shortcuts import render
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-import urllib, json
+import requests
 
   	
 class SearchGetView(APIView):
@@ -35,9 +35,8 @@ class SearchGetView(APIView):
 	def conectionapi(request, language, location):
 
 		url = "https://api.github.com/search/users?q=language:"+language+"+location:"+location+"&type=Users"
-		
-		response = urllib.urlopen(url)
-		data = json.loads(response.read())
+		r = requests.get(url)
+		data = r.json()
 		return data
 
 
